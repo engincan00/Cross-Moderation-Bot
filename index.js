@@ -17,7 +17,7 @@ client.on("ready", async() => {
         activity: { name: "Cross was here!" },
         status: "dnd"
     });
-    let botVoiceChannel = client.channels.cache.get(ayar.botVoiceChannel);
+    let botVoiceChannel = client.channels.cache.get(ayar.voiceChannel);
     if (botVoiceChannel)
         botVoiceChannel
         .join()

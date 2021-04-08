@@ -33,7 +33,7 @@ exports.run = async(client, message, args) => {
     user.roles.set([ayar.jailRol])
     message.react(ayar.yes)
     message.channel.send(embed.setFooter(`Üyenin ceza puanı: ${puan}`).setDescription(`
-${user} Adlı kullanıcı ${message.author} tarafından \`${reason}\` sebebiyle  cezalandırıldı. Ceza ID: \`#${cezaID}\``)).then(m > m.delete({ timeout: 7000 }) && message.delete({ timeout: 7000 }))
+${user} Adlı kullanıcı ${message.author} tarafından \`${reason}\` sebebiyle  cezalandırıldı. Ceza ID: \`#${cezaID}\``)).then(m => m.delete({ timeout: 7000 }) && message.delete({ timeout: 7000 }))
 
     db.add(`cezaid.${message.guild.id}`, +1)
     kdb.add(`jailler.${message.author.id}`, 1)
